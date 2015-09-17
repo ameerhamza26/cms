@@ -12,8 +12,9 @@
 								<div class="form-group">
 									<label class="col-md-1 control-label">Date</label>
 									<div class="col-md-3">
-										<input type="text" class="form-control" ng-model="formData.date" name="date">
+										<input type="text" id="date1" class="form-control" ng-model="formData.date" name="date" >
 									</div>
+									
 										<label class="col-md-2 control-label">Description</label>
 									<div class="col-md-6">
 										<input type="text" class="form-control" ng-model="formData.description" name="description">
@@ -25,10 +26,24 @@
 									<div class="col-md-3">
 										<input type="text" class="form-control" ng-model="formData.name" name="name">
 									</div>
-										<label class="col-md-2 control-label">Designation</label>
+									<label class="col-md-2 control-label">Designation</label>
+									<div class="radio col-md-4"><label>
+								<input type="radio" ng-model="users.role" name="role{{$index}}" value="pUser" ng-model="role">
+								Power User
+							</label>
+							<label>
+								<input type="radio" ng-model="users.role" name="role{{$index}}" value="aManager" ng-model="role">
+								Application Manager
+							</label>
+							<label>
+								<input type="radio" ng-model="users.role" name="role{{$index}}" value="aOwner" ng-model="role">
+								Application Owner
+							</label></div>
+
+										<!--<label class="col-md-2 control-label">Designation</label>
 									<div class="col-md-6">
 										<input type="text" class="form-control" ng-model="formData.designation" name="designation">
-									</div>
+									</div>-->
 
 								</div>
 
